@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copybutton</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .textarea {
+            resize: none;
+            margin: 15px 0px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all .2s ease;
+        }
+        
+        .contain.box-center {
+            display: flex;
+            flex-direction: column;
+            place-items: flex-start;
+            align-content: space-around;
+        }
+        
+        .textarea:hover,
+        .textarea:focus {
+            box-shadow: 0px 0px 1px 2px #00BCD4;
+        }
+        
+        .pop {
+            height: 2rem;
+            width: 5rem;
+            position: relative;
+            text-align: center;
+            line-height: 2rem;
+            top: -2.2rem;
+            border-radius: 2px;
+            /* left: 9rem; */
+            left: 3rem;
+            z-index: -1;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+        
+        .show {
+            position: relative;
+            left: 9rem;
+            opacity: 1;
+        }
+        
+        .pop:before {
+            content: "";
+            position: absolute;
+            height: 13px;
+            width: 13px;
+            top: 43%;
+            left: -10px;
+            background: #007bff;
+            transform: rotate(45deg) translateY(-50%);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain box-center">
+        <textarea name="text" id="text-1" class="textarea" cols="55" rows="5"></textarea>
+        <button class="btn bg-blue te-white">Copy To Clipboard</button>
+        <span class="bg-blue te-white pop">Copied</span>
+        <textarea name="text" id="text-2" class="textarea" cols="55" rows="5"></textarea>
+    </div>
+    <script>
+        const d = document;
+        let copytext = d.getElementById("text-1");
+        let pastetext = d.getElementById("text-2");
+        let copybtn = d.querySelector('.btn');
+        let pop = d.querySelector('.pop');
+
+        copybtn.addEventListener('click', () => {
+            copytext.select();
+            pastetext.value = "";
+            if (d.execCommand("copy")) {
+                pastetext.focus();
+                pop.classList.add("show");
+                setTimeout(() => {
+                    pop.classList.remove("show");
+                }, 700)
+
+            } else {
+                alert("Something wrong..")
+            }
+
+        });
+    </script>
+</body>
+
+</html>

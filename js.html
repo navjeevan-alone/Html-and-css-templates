@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js test</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .inp {
+            display: block;
+            height: 2rem;
+            width: 20rem;
+            margin: auto;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid grey;
+            padding-left: 10px;
+            position: relative;
+            top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" class="inp" id="inp-1" onblur="hello()">
+    <script>
+        //    arrow functions
+        let a = (name) => {
+            return 20;
+
+        };
+        let inp = document.getElementById('inp-1');
+
+        function hello() {
+            console.log(inp.value);
+        }
+        inp.addEventListener('blur', hello);
+    </script>
+
+</body>
+
+</html>

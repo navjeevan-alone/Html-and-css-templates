@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading round</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        * {
+            font-family: 'Balsamiq Sans', cursive;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            background: rgb(31, 31, 31);
+        }
+        
+        .contain {
+            height: 12rem;
+            width: 12rem;
+            position: relative;
+        }
+        
+        .contain h2 {
+            position: absolute;
+        }
+        
+        .contain .round {
+            position: absolute;
+            border-bottom: 5px solid #fff;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            animation: rotate .8s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            0% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain box-center">
+        <div class="load">
+            <h2 class="te-white box-center">Loading</h2>
+            <div class="round"></div>
+        </div>
+    </div>
+</body>
+
+</html>

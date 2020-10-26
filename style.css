@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Balsamiq Sans", cursive;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    color: #000;
+    text-align: center;
+    background-color: #80ffdb;
+    width: 50%;
+    margin: 1rem auto;
+    text-transform: capitalize;
+}
+
+:root {
+    --red: rgb(235, 39, 39);
+    --voilet: --voilet;
+}
+
+.top-nav-ul {
+    display: flex;
+    /* margin-left: 2rem; */
+    background-color: #6930c3;
+    height: 3rem;
+}
+
+.top-nav-li {
+    height: 3rem;
+    width: 7rem;
+}
+
+.top-nav-a {
+    display: block;
+    height: 3rem;
+    width: 7rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.top-nav-a:hover {
+    background-color: #5390d9;
+}
+
+.btn-div {
+    height: 3rem;
+    display: flex;
+    position: relative;
+    left: 27rem;
+    padding: 0.5rem 0rem;
+}
+
+.nav-2 {
+    margin: 1rem auto;
+}
+
+.btn {
+    height: 2.2rem;
+    width: 6.8rem;
+    margin: -2px 10px;
+    border-radius: 8px;
+    border: none;
+    background: #4ea8de;
+    font-size: 15px;
+}
+
+.btn a {
+    display: block;
+    height: 2.2rem;
+    width: 6.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+.btn:hover {
+    transition: 0.7s;
+    background-color: #4ea8de75;
+}
+
+.nav-logo {
+    height: 2.6rem;
+    width: 2.6rem;
+    margin: 0.2rem 0.6rem;
+}
+
+.nav-logo-img {
+    height: 2.6rem;
+    width: 2.6rem;
+}
+
+.nav-4 {
+    width: 18rem;
+    margin: auto;
+}
+
+.brand-name {
+    height: 3rem;
+    width: auto;
+    line-height: 3rem;
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+.ul-2 {
+    flex-direction: column;
+}
+
+.btn-nav-1 {
+    height: 2.2rem;
+    width: 2.2rem;
+    position: relative;
+    left: 7rem;
+    border: 3px solid white;
+    border-radius: 6px;
+    color: red;
+    font-size: 24px;
+    background: #a064fff7;
+}
+
+
+/* .btn-nav-1:focus {
+    background-color: #0019ff;
+    border: none;
+} */
+
+.li-4 {
+    /* display: none; */
+    display: block;
+    background-color: #6930c3b3;
+    width: 18rem;
+}
+
+.btn-nav-1:hover .li-4 {
+    display: none;
+}
+
+.a-4 {
+    display: block;
+    height: 3rem;
+    width: 18rem;
+    text-align: left;
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.a-4:hover::before {
+    content: "";
+    height: 2rem;
+    width: 0.2rem;
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* .h3 {
+    display: block;
+    color: red;
+}
+
+.h3:hover::before {
+    content: "";
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    height: 2rem;
+    width: 0.3rem;
+    background-color: red;
+} */
+
+.inp {
+    color: #000;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    height: 3rem;
+    width: 20rem;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+#btn-123 {
+    height: 3rem;
+    width: 24rem;
+    background-color: rgb(250, 212, 212);
+    border: 1px solid rgba(255, 0, 0, 0.973);
+    border-radius: 7px;
+    color: rgba(255, 0, 0, 0.212);
+    text-transform: capitalize;
+    margin-left: 2rem;
+}
+
+#btn-123 a {
+    color: rgb(161, 0, 0);
+}
+
+#btn-123:hover {
+    transition: 0.8s;
+    background-color: #cc3300;
+}
+
+#btn-123:hover a {
+    transition: 0.8;
+    color: #fff;
+}

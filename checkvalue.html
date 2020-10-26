@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check value</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .box {
+            height: 10rem;
+            width: 20rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid red;
+            padding-left: 3rem;
+            padding-top: 1rem;
+        }
+        
+        .group {
+            margin: 9px 0px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>See Console</h3>
+        <div class="group">
+            <input type="checkbox" name="check-1" id="check-1" class="checkbox">
+            <label for="check-1" class="lable" id="lable-1">Check-1</label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-2" id="check-2" class="checkbox">
+            <label for="check-2" class="lable" id="lable-2">Check-2</label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-3" id="check-3" class="checkbox">
+            <label for="check-3" class="lable" id="lable-3">Check-3</label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-4" id="check-4" class="checkbox">
+            <label for="check-4" class="lable" id="lable-4">Check-4</label>
+        </div>
+
+        <div class="group">
+            <button class="btn bg-blue te-white" id="btn"> click
+                    and see console</button>
+        </div>
+    </div>
+    <script>
+        btn.addEventListener('click', () => {
+            var d = document;
+            btn = d.getElementById("btn")
+            let a = d.getElementsByClassName("checkbox");
+            let b = d.getElementsByClassName("lable");
+            for (let i = 0; i < lable.length; i++) {
+                if (a[i].checked == true) {
+                    console.log("lable is " + b[0].innerText);
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

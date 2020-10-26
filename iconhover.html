@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon hover effect</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .icons {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            position: relative;
+            border: 1px solid var(--blue);
+            transition: .5s ease-in-out;
+        }
+        
+        .icons::after {
+            content: "";
+            position: absolute;
+            height: 0rem;
+            width: 2rem;
+            background: var(--blue);
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all .5s;
+        }
+        
+        .icons:hover::after {
+            content: "";
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background: var(--blue);
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: -1;
+        }
+        
+        i {
+            color: var(--blue);
+            transition: color .5s;
+        }
+        
+        .icons:hover i {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain" style="display: flex;">
+
+        <div class="icons">
+            <i class="fa fa-twitter box-center"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-facebook box-center"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-whatsapp box-center"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-reddit box-center"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-save box-center"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-file-pdf box-center"></i>
+        </div>
+        <div class="icons bo-blue bo-1">
+            <i class="fas fa-search box-center te-blue"></i>
+        </div>
+    </div>
+</body>
+
+</html>

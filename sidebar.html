@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        * {
+            color: #fff;
+        }
+        
+        header {
+            height: 3rem;
+            width: 100%;
+            background: #1e272e;
+            line-height: 3rem;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+        
+        header h3 {
+            line-height: 2.5rem;
+            display: block;
+            position: absolute;
+            left: 6rem;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .contain {
+            height: 38rem;
+            width: 10rem;
+            background: #485460;
+            position: relative;
+            /* left: -10rem; */
+        }
+        
+        .toggle-box:focus .contain {
+            left: 0px;
+        }
+        
+        .User {
+            height: 9rem;
+            width: 100%;
+            position: absolute;
+            top: 0rem;
+            left: 0;
+            display: grid;
+            place-items: center;
+            background: #0fbcf9;
+        }
+        
+        i.fa.fa-user-circle {
+            font-size: 75px;
+            color: #2a2b2d;
+            background: #fffff8;
+            border-radius: 50%;
+        }
+        
+        .name {
+            height: 3rem;
+            width: 100%;
+            position: absolute;
+            top: 7rem;
+            text-align: center;
+            font-size: 21px;
+        }
+        
+        .main {
+            position: absolute;
+            top: 9rem;
+            width: 100%;
+        }
+        
+        .main li {
+            height: 3rem;
+            width: 100%;
+            line-height: 2rem;
+            padding-left: 10px;
+            border-left: 5px solid #485460;
+        }
+        
+        .main li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            margin-left: 10px;
+            line-height: 3rem;
+        }
+        
+        .main li:hover {
+            background: #4bcffa;
+            border-left: 5px solid black;
+        }
+        
+        .toggle-box {
+            display: grid;
+            place-items: center;
+            height: 2rem;
+            width: 2rem;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            border-radius: 5px;
+            /* border: 2px solid red; */
+            transform: translateY(-50%);
+        }
+        
+        input#toggle {
+            position: absolute;
+            display: none;
+        }
+        
+        label.toggle {
+            height: 10%;
+            width: 78%;
+            background: red;
+            position: relative;
+        }
+        
+        label.toggle::before {
+            content: "";
+            position: absolute;
+            top: -170%;
+            height: 100%;
+            width: 100%;
+            background: #0fbcf9;
+        }
+        
+        label.toggle::after {
+            content: "";
+            position: absolute;
+            top: 170%;
+            height: 100%;
+            width: 100%;
+            background: #0fbcf9;
+        }
+        
+        label.toggle-box:hover .toggle {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="toggle-box">
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" class="toggle"></label>
+        </div>
+        <h3>Logo</h3>
+    </header>
+    <div class="contain">
+        <div class="User">
+            <i class="fa fa-user-circle"></i>
+        </div>
+        <div class="name">
+            <h4>Username</h4>
+        </div>
+        <ul class="main">
+            <li class="transition"><a href="#">Home</a></li>
+            <li class="transition"><a href="#">Dashboard</a></li>
+            <li class="transition"><a href="#">About</a></li>
+            <li class="transition"><a href="#">Contact us</a></li>
+            <li class="transition"><a href="#">Change Password</a></li>
+            <li class="transition"><a href="#">Log out</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+</html>

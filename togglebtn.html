@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle button for sidebar</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .box {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+        }
+        
+        .toggle-box {
+            height: 2.5rem;
+            width: 2.5rem;
+            background: #fff;
+            position: relative;
+            border-radius: 50%;
+        }
+        
+        .toggle-box .line {
+            height: 12%;
+            width: 61%;
+            background: #000;
+            border-radius: 4px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .toggle-box .line.top {
+            position: absolute;
+            top: 20%;
+        }
+        
+        .toggle-box .line.middle {
+            top: 44%;
+        }
+        
+        .toggle-box .line.bottom {
+            position: absolute;
+            top: 68%;
+        }
+        
+        .line.bottom:focus {
+            /* transform: rotate(45deg); */
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="toggle-box">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </div>
+    </div>
+</body>
+
+</html>

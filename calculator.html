@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .cal {
+            text-align: center;
+            background-color: #5f5e5e;
+            display: block;
+            height: 23rem;
+            width: 21.6rem;
+            margin: auto;
+            border-radius: 20px;
+            position: relative;
+            top: 1rem;
+            padding: 0px 14px;
+        }
+        
+        input {
+            position: relative;
+            top: 1rem;
+            display: block;
+            height: 3rem;
+            width: 99%;
+            margin: auto;
+            margin-bottom: 0px;
+            padding: 5px 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            outline: none;
+            border: 0px;
+        }
+        
+        .bg {
+            background-color: #000000;
+            height: 61px;
+            width: 61px;
+            font-size: 20px;
+        }
+        
+        table {
+            position: absolute;
+            top: 5.5rem;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="bg-blue te-white te-center">My Own Calculator
+    </h2>
+    <div class="cal">
+        <input type="number" id="screen">
+        <table>
+            <tr>
+                <td><button class="btn bg ">7</button>
+                </td>
+                <td><button class="btn bg ">8</button>
+                </td>
+                <td><button class="btn bg ">9</button>
+                </td>
+                <td><button class="btn bg ">Dec</button>
+                </td>
+                <td><button class="btn bg ">AC</button>
+                </td>
+            </tr>
+            <tr>
+                <td><button class="btn bg">4</button>
+                </td>
+                <td><button class="btn bg">5</button>
+                </td>
+                <td><button class="btn bg">6</button>
+                </td>
+                <td><button class="btn bg ">X</button>
+                </td>
+                <td><button class="btn bg">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td><button class="btn bg">1</button>
+                </td>
+                <td><button class="btn bg">2</button>
+                </td>
+                <td><button class="btn bg">3</button>
+                </td>
+                <td><button class="btn bg">+</button>
+                </td>
+                <td><button class="btn bg sym">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td><button class="btn bg">0</button>
+                </td>
+                <td><button class="btn bg">00</button>
+                </td>
+                <td><button class="btn bg ">=</button>
+                </td>
+                <td><button class="btn bg">(</button>
+                </td>
+                <td><button class="btn bg">)</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let screen = document.getElementById('screen');
+        let buttons = document.querySelectorAll('.bg');
+        let screenText = "";
+        for (item of buttons) {
+            item.addEventListener('click', (e) => {
+                buttonText = e.target.innerText;
+                if (buttonText == "X") {
+                    buttonText = "*";
+                    screenText += buttonText;
+                    screen.value += screenText;
+                } else if ((buttonText == "AC") || (buttonText == "Dec")) {
+
+                    screenText = "";
+                    screen.value = screenText;
+                } else if (buttonText == "=") {
+                    screen.value = eval(screenText);
+                } else {
+                    screenText = buttonText;
+                    screen.value += screenText;
+                }
+
+                console.log("button text is " + buttonText);
+            })
+        }
+    </script>
+</body>
+
+</html>

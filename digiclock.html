@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple digital clock in html css js</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .box {
+            height: 4.45rem;
+            width: 18.1rem;
+            border: 1px solid var(--red);
+            margin: auto;
+            margin-bottom: 3rem;
+            position: relative;
+            top: 2rem;
+        }
+        
+        p {
+            position: absolute;
+            height: 2.5rem;
+            width: 6rem;
+            /* margin: 1px; */
+            /* border: 1px solid var(--red); */
+            background-color: var(--grey);
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+        }
+        
+        #box1 {
+            position: absolute;
+            /* left: .6rem; */
+            vertical-align: middle;
+            /* margin: 0px -10px; */
+        }
+        
+        #box2 {
+            position: absolute;
+            left: 6rem;
+            vertical-align: middle;
+            /* margin: 0px var(--rl); */
+        }
+        
+        #box3 {
+            position: absolute;
+            left: 12rem;
+            vertical-align: middle;
+            /* margin: 0px 9px; */
+        }
+        
+        .head {
+            /* position: absolute; */
+            text-align: center;
+            background: var(--blue);
+            color: var(--white);
+        }
+        
+        #date1 {
+            position: absolute;
+            left: 0rem;
+        }
+        
+        #date2 {
+            position: absolute;
+            left: 6rem;
+        }
+        
+        #date3 {
+            position: absolute;
+            left: 12rem;
+        }
+    </style>
+</head>
+
+<body class="bg-lightgrey">
+    <h1 class="te-center bg-blue te-white">Simple Digital clock with HTML CSS and Pure Js</h1>
+
+    <div class="box mb-5">
+        <h2 class="head te-purple">Time</h2>
+        <p id="box1"></p>
+        <p id="box2"></p>
+        <p id="box3"></p>
+
+    </div>
+    <div class="box">
+        <h2 class="head  te-white bg-blue">Date </h2>
+        <p class="date" id="date1"></p>
+
+        <p class="date" id="date2"></p>
+
+        <p class="date" id="date3"></p>
+    </div>
+    <script>
+        setInterval(() => {
+            let d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            let p1 = document.getElementById('box1').innerText = h + "  :";
+            let p2 = document.getElementById('box2').innerText = m + "  :";
+            let p3 = document.getElementById('box3').innerText = s;
+            // console.log(p);
+        }, 1000);
+        setInterval(() => {
+            let d = new Date();
+            let day = d.getDate();
+            let mon = d.getMonth();
+            let year = d.getFullYear();
+            let p4 = document.getElementById('date1').innerText = day + "  :";
+            let p5 = document.getElementById('date2').innerText = mon + "  :";
+            let p6 = document.getElementById('date3').innerText = year;
+            // console.log(p);
+        }, 1000);
+    </script>
+</body>
+
+</html>

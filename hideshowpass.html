@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show password</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .contain {
+            height: 2rem;
+            width: 30rem;
+        }
+        
+        #pass,
+        #pass2 {
+            height: 2rem;
+            width: 13rem;
+        }
+        
+        i#eye {
+            height: 2rem;
+            width: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            font-size: 26px;
+            position: absolute;
+            right: 1rem;
+        }
+        
+        #hidebar {
+            height: 4px;
+            background: linear-gradient(black 50%, white 50%);
+            position: absolute;
+            top: 6px;
+            transform: rotate(-53deg) translatey(-50%);
+            right: 23px;
+            transition: all .5s ease-in-out;
+            transform-origin: 100% 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain box-center">
+
+        <input type="password" name="pass" id="pass" placeholder="Password">
+        <input type="password" name="pass" id="pass2" placeholder="Password">
+        <i class="fa fa-eye" id="eye" onclick="show()"></i>
+        <span id="hidebar"></span>
+
+    </div>
+    <script>
+        const d = document;
+        var state = false;
+        let pass = d.getElementById("pass");
+        let password = d.getElementById("pass2");
+        let hidebar = d.getElementById("hidebar")
+
+        function show() {
+            if (state) {
+                pass.setAttribute("type", "password");
+                password.setAttribute("type", "password");
+                hidebar.style.width = "0px";
+                state = false;
+            } else {
+                pass.setAttribute("type", "text");
+                password.setAttribute("type", "text");
+                hidebar.style.width = "27px";
+                state = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

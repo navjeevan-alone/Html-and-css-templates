@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>form-1</title>
+        <link rel="stylesheet" href="common.css">
+        <style>
+            * {
+                color: #fff;
+                font-family: sans-serif;
+            }
+
+            :root {
+                --f-s: 16px;
+            }
+
+            body {
+                height: 100vh;
+                width: 100vw;
+                background: url('Code files\all_type_documents\Images\bg1dark.png') no-repeat;
+                background-size: cover;
+            }
+
+            .form {
+                margin: auto;
+                position: relative;
+                top: 2rem;
+                border: 1px solid red;
+                height: 20rem;
+                width: 20rem;
+                padding-top: 1rem;
+                padding-left: 2rem;
+            }
+
+            .title {
+                display: block;
+                color: var(--blue);
+                width: fit-content;
+                border-bottom: 5px solid white;
+            }
+
+            .i {
+                color: red;
+                font-size: var(--f-s);
+            }
+
+            input {
+                height: 2rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: 0;
+                border-bottom: 3px solid #000;
+            }
+
+            input:hover,
+            input:focus {
+                border: 0px solid;
+                border-bottom: 3px solid #000;
+            }
+
+            .btn-con {
+                position: absolute;
+                top: 14rem;
+                left: 0rem;
+                display: block;
+                width: 100%;
+                padding-left: 0rem;
+                margin: auto;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="form">
+            <h1 class="title ">Login</h1>
+            <div class="name">
+
+                <span class="icons">
+                    <i class="fa fa-google i"></i>
+                </span>
+                <input class="te-capital" type="text"
+                       placeholder="username">
+            </div>
+            <div class="pass">
+
+                <span class="icons">
+                    <i class="fa fa-google i"></i>
+                </span>
+                <input class="te-capital" type="password"
+                       placeholder="password">
+            </div>
+            <div class="btn-con">
+
+                <a href="#"
+                   class="btn bg-blue te-white">Login</a>
+            </div>
+        </div>
+    </body>
+
+</html>

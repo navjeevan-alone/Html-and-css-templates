@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reactjs logo</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        html {
+            font-size: 62.50%;
+        }
+        
+        body {
+            background: rgb(31, 31, 31);
+        }
+        
+        .contain {
+            height: 15rem;
+            width: 15rem;
+        }
+        
+        .ellipse {
+            position: absolute;
+            height: 5rem;
+            width: 15rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 5px solid #61dafb;
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg); */
+        }
+        
+        .ellipse::before {
+            content: "";
+            height: 4rem;
+            width: 15rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 5px solid #61dafb;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-57deg);
+        }
+        
+        .ellipse::after {
+            content: "";
+            height: 4rem;
+            width: 15rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 5px solid #61dafb;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(57deg);
+        }
+        
+        .circle {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            background: #61dafb;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain box-center">
+        <div class="ellipse box-center">
+            <div class="circle box-center"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

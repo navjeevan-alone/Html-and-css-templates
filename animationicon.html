@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icon hover effect</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "oswald", arial;
+        }
+        
+        .container {
+            position: relative;
+            top: 1rem;
+            height: 20rem;
+            width: 68rem;
+            border: 0;
+            margin: auto;
+            display: flex;
+            /* position: fixed; */
+            align-content: space-between;
+            background-color: #4bcffa;
+        }
+        
+        .box {
+            display: inline-block;
+            border-radius: 10px;
+            height: 19rem;
+            width: 18rem;
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+            text-align: center;
+            margin: auto;
+            overflow: hidden;
+            margin: -12px 32px;
+        }
+        
+        .icon-box {
+            border-radius: 10px;
+            background: #05c46b;
+            height: 100%;
+            width: 100%;
+            transition: all .5s ease-in-out;
+        }
+        
+        .icon-box i {
+            color: white;
+            display: inline-block;
+            font-size: 50px;
+            height: 88px;
+            width: 88px;
+            /* background: yellow; */
+            line-height: 88px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .5s ease-in-out;
+        }
+        
+        .content {
+            position: absolute;
+            top: 110%;
+            padding: 1.5rem;
+            transition: all .5s ease-in-out;
+        }
+        
+        .content h3,
+        .content p {
+            color: #fff;
+        }
+        /* hover transition */
+        
+        .box:hover .icon-box {
+            background: #0be881;
+        }
+        
+        .box:hover .icon-box i {
+            background: #05c46b;
+            top: 19%;
+            border-radius: 50%;
+            font-size: 30px;
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+        }
+        
+        .box:hover .content {
+            position: absolute;
+            top: 35%;
+        }
+        /* box colors */
+        
+        #icon-box-1 {
+            background-color: #575fcf;
+        }
+        
+        #icon-box-2 {
+            background-color: #ffc048;
+        }
+        
+        #icon-box-3 {
+            background-color: #FF5E57;
+        }
+        /* font icons colors */
+        
+        #i-1 {
+            background-color: #575fcf;
+        }
+        
+        .box:hover #i-1 {
+            background-color: #3c40c6;
+        }
+        
+        #i-2 {
+            background-color: #ffc048;
+        }
+        
+        .box:hover #i-2 {
+            background-color: #ffa801;
+        }
+        
+        #i-3 {
+            background-color: #FF5E57;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 19rem;
+        }
+        
+        .box:hover #i-3 {
+            background-color: #f73025;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box" id="box-1">
+            <div class="icon-box" id="icon-box-1">
+                <i class="fa fa-search" id="i-1"></i>
+            </div>
+            <div class="content">
+                <h3>Search</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquid. Optio, atque corporis. Magni accusantium beatae, veritatis exercitationem minus aut nemo fugiat.
+                </p>
+            </div>
+        </div>
+        <div class="box" id="box-2">
+            <div class="icon-box" id="icon-box-2">
+                <i class="fa fa-lock" id="i-2"></i>
+            </div>
+            <div class="content">
+                <h3>Privacy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquid. Optio, atque corporis. Magni accusantium beatae, veritatis exercitationem minus aut nemo fugiat.
+                </p>
+            </div>
+        </div>
+        <div class="box" id="box-3">
+            <div class="icon-box" id="icon-box-3">
+                <i class="fa fa-map" id="i-3"></i>
+            </div>
+            <div class="content">
+                <h3>Location</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquid. Optio, atque corporis. Magni accusantium beatae, veritatis exercitationem minus aut nemo fugiat.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

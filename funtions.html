@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js funtions</title>
+    <link rel="stylesheet" href="../csslibrary/common.css">
+</head>
+
+<body>
+    <p class="te-capital">This funtion is for factorial</p>
+    <input type="number" name="number" id="factorial" onblur="factorial()">
+    <p class="result te-capital">factoral will be shown here!</p>
+    <script>
+        const d = document;
+        let screen = d.querySelector("#factorial");
+        let result = d.querySelector(".result");
+
+        function factorial(n = screen.value) {
+
+            for (let i = 1; i <= n; i++) {
+                n *= i;
+            }
+            result.innerText = "Your answer is " + n;
+
+        }
+        console.log(result.innerText);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+         :root {
+            --top: 3rem;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        ul {
+            transition: all .6s;
+        }
+        
+        .mainul {
+            display: flex;
+            height: 5rem;
+            width: fit-content;
+            text-align: center;
+        }
+        
+        .mainul li {
+            height: 3rem;
+            width: 10rem;
+            background: #1e272e;
+            line-height: 3rem;
+            transition: all .5s;
+        }
+        
+        .mainul li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            color: #fff;
+        }
+        /* most important */
+        
+        .ul-container {
+            position: relative;
+        }
+        /* ended here  */
+        
+        .mainul li .subul {
+            position: absolute;
+            display: none;
+        }
+        
+        .mainul li .subul .deepul {
+            position: absolute;
+            left: 100%;
+            top: 80%;
+            display: none;
+        }
+        
+        .mainul li .subul .deepul .subdeepul {
+            position: absolute;
+            left: 100%;
+            top: 67%;
+            display: none;
+        }
+        /* some corrections */
+        
+        .mainul li .subul #deepul-3 {
+            position: absolute;
+            left: 100%;
+            top: 80%;
+            display: none;
+        }
+        /* hover animation */
+        
+        .mainul li :hover {
+            background: #485460;
+        }
+        
+        .mainul li:hover .subul {
+            display: block;
+        }
+        
+        .mainul li:hover .subul {
+            color: red;
+        }
+        
+        .mainul li .subul :hover .deepul {
+            display: block;
+        }
+        
+        .mainul li .subul :hover #deepul-3 {
+            display: block;
+        }
+        
+        .mainul li .subul .deepul :hover .subdeepul {
+            display: block;
+        }
+        /* series:-- mainul>>subul>>deepul>>subdeepul */
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <ul class="mainul">
+            <li><a href="#">Item 1</a></li>
+            <li class="ul-container"><a href="#">Item 2</a>
+                <ul class="subul">
+                    <li><a href="#">Sub Item 1</a></li>
+                    <li><a href="#">Sub Item 2</a></li>
+                    <li><a href="#">Sub Item 3</a></li>
+                    <li><a href="#">Sub Item 4</a></li>
+                    <li><a href="#">Sub Item 5</a>
+                        <ul class="deepul">
+                            <li><a href="#">Deep Item 1</a></li>
+                            <li><a href="#">Deep Item 2</a></li>
+                            <li><a href="#">Deep Item 3</a>
+                                <ul class="subdeepul">
+                                    <li><a href="#">Sub Deep Item 1</a></li>
+                                    <li><a href="#">Sub Deep Item 2</a></li>
+                                    <li><a href="#">Sub Deep Item 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Item 3</a>
+                <ul class="subul">
+                    <li><a href="#">Sub Item 1</a></li>
+                    <li><a href="#">Sub Item 2</a></li>
+                    <li><a href="#">Sub Item 3</a>
+                        <ul class="deepul" id="deepul-3">
+                            <li><a href="#">Sub Item 1</a></li>
+                            <li><a href="#">Sub Item 2</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a>
+                <ul class="subul">
+                    <li><a href="#">Sub Item 1</a></li>
+                    <li><a href="#">Sub Item 2</a></li>
+                    <li><a href="#">Sub Item 3</a></li>
+                    <li><a href="#">Sub Item 4</a></li>
+                    <li><a href="#">Sub Item 5</a>
+                        <ul class="deepul">
+                            <li><a href="#">Sub Item 1</a></li>
+                            <li><a href="#">Sub Item 2</a></li>
+                            <li><a href="#">Sub Item 3</a>
+                                <ul class="subdeepul">
+                                    <li><a href="#">Sub Item 1</a></li>
+                                    <li><a href="#">Sub Item 2</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

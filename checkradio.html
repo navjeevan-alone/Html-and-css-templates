@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        /* .box {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20rem;
+            height: 13rem;
+          //  transform: translate(-50%, -50%);
+            //border: 2px solid #ded7d7; 
+           //background-color: var(--lightgrey); 
+            border-radius: 10px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: bolder;
+            /* border-left: 5px solid #f31515; 
+            display: block;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+        }
+        
+        .title::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 1px;
+            left: 19px;
+            height: 2.5rem;
+            width: 10px;
+            border-radius: 9px;
+            background: #8BC34A;
+        }
+        
+        .group {
+            width: fit-content;
+            height: 2rem;
+            line-height: 2rem;
+            margin: 11px 0px;
+            text-transform: capitalize;
+        }
+        
+        input[ type="checkbox"] {
+            display: none;
+        }
+        
+        label {
+            position: relative;
+        }
+        
+        label::before {
+            content: "";
+            background: url("img/checkgreen.png") no-repeat;
+            background-size: contain;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: -36px;
+            top: -3px;
+            background-position: center;
+            transform: scale(0) rotatez(180deg);
+            transition: all .5s cubic-bezier(.54, .01, 0, 1.49);
+        }
+        
+        input[type="checkbox"]:checked+label::before {
+            transform: scale(1) rotatez(0deg);
+        }
+        
+        label::after {
+            content: "";
+            border: 2px solid #39da39;
+            border-radius: 50%;
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            left: -37px;
+            top: -4px;
+        } */
+        
+        .result {
+            height: 10rem;
+            width: 10rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <div class="box pl-5 p-2">
+        <h3 class="title te-left">My Custom Checkboxes
+        </h3>
+        <div class="group">
+
+            <input type="checkbox" name="check-1" id="check-1"><label for="check-1">
+                    Apple
+                </label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-2" id="check-2">
+            <label for="check-2">Banana</label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-3" id="check-3">
+            <label for="check-3">Orange</label>
+        </div>
+        <div class="group">
+            <input type="checkbox" name="check-4" id="check-4">
+            <label for="check-4">Custurd Apple</label>
+        </div>
+
+    </div> -->
+    <div class="result">
+        <div class="check">
+
+            <input type="checkbox" name="check-4" id="check-4">
+            <label for="check-4">Apple</label>
+        </div>
+        <div class="check">
+
+            <input type="checkbox" name="check-5" id="check-5">
+            <label for="check-5">Banana</label>
+        </div>
+        <div class="check">
+
+            <input type="checkbox" name="check-6" id="check-6">
+            <label for="check-6">Water-melon</label>
+        </div>
+        <button class="btn bg-blue te-white">
+                View Result
+            </button>
+        <!-- <input type="text"> -->
+        <h3 class="result">Result</h3>
+    </div>
+    <script>
+        let view = document.querySelector(".btn");
+        let result = document.querySelector(".result");
+
+        view.addEventListener('click', () => {
+            let checked = document.querySelector('input[type="checkbox"]:checked');
+            result.innerText = checked.value;
+
+        })
+    </script>
+</body>
+
+</html>

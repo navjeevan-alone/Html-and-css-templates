@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select validation</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        select {
+            height: 3rem;
+            width: 10rem;
+        }
+        
+        option {
+            height: 3rem;
+            width: 10rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contain">
+        <select name="country" id="country" onchange="opt()">
+<option value="Item 1">Item 1</option>
+<option value="Item 2">Item 2</option>
+<option value="Item 3">Item 3</option>
+<option value="Item 4">Item 4</option>
+<option value="Item 5">Item 5</option>
+        </select>
+    </div>
+    <script>
+        let option = document.querySelector("#country")
+
+        function opt() {
+            console.log(option.value)
+        }
+    </script>
+</body>
+
+</html>

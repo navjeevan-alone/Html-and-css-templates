@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font box animation</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        * {
+            font-family: 'oswald';
+        }
+        /* :default css */
+        
+        .contain {
+            position: relative;
+            top: 2rem;
+            height: 20rem;
+            width: 90%;
+            margin: auto;
+            border: 1px solid red;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .contain .box {
+            display: inline-block;
+            height: 18rem;
+            width: 25%;
+            margin: auto;
+            border: 2px solid blue;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .contain .box .icon-box {
+            border: 2px solid green;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .contain .box .icon-box .icon {
+            border: 2px solid crimson;
+            font-size: 60px;
+            height: 100%;
+            width: 100%;
+            background: crimson;
+            color: white;
+            line-height: 18rem;
+        }
+        
+        .contain .box .content {
+            border: 2px solid red;
+        }
+        
+        .contain .box .content h3,
+        p {
+            border: 2px solid red;
+        }
+        /* hover css */
+        
+        .contain .box:hover {
+            border: 2px solid green;
+        }
+        
+        .contain .box:hover .icon-box {
+            border: 2px solid green;
+            display: block;
+            position: absolute;
+            top: 1rem;
+            left: 6rem;
+            height: 30%;
+            width: 30%;
+        }
+        
+        .contain .box:hover .icon-box i {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="box box-center" id="box-1">
+            <div class="icon-box" id="icon-box-1">
+                <i class="fa fa-user icon" id="icon--1"></i>
+            </div>
+            <div class="content">
+                <h3>User</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos in earum esse inventore sit quos aliquid iusto, minus magni.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

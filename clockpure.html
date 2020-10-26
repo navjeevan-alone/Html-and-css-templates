@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock with html css js</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --left: 9.8rem;
+            --width: 4px;
+        }
+        
+        .container {
+            height: 20rem;
+            width: 20rem;
+            /* border: 2px solid red; */
+            margin: auto;
+            position: relative;
+            top: 2rem;
+            background: url('clock-1.png') no-repeat;
+            background-size: cover;
+        }
+        
+        .hand {
+            position: absolute;
+            background-color: black;
+            border-radius: 4px;
+        }
+        
+        #hand1 {
+            display: block;
+            position: absolute;
+            top: 5.2rem;
+            left: var(--left);
+            transform-origin: bottom;
+            width: var(--width);
+            height: 4.8rem;
+            /* background-color: red; */
+            z-index: 3;
+        }
+        
+        #hand2 {
+            display: block;
+            position: absolute;
+            top: 4.5rem;
+            left: var(--left);
+            transform-origin: bottom;
+            width: var(--width);
+            height: 5.5rem;
+            /* background-color: green; */
+            z-index: 2;
+        }
+        
+        #hand3 {
+            display: block;
+            position: absolute;
+            top: 3.1rem;
+            left: var(--left);
+            transform-origin: bottom;
+            width: var(--width);
+            height: 6.9rem;
+            /* background-color: yellow; */
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hand" id="hand1"></div>
+        <div class="hand" id="hand2"></div>
+        <div class="hand" id="hand3"></div>
+    </div>
+    <script>
+        setInterval(() => {
+            d = new Date();
+            htime = d.getHours();
+            mtime = d.getMinutes();
+            stime = d.getSeconds();
+            hrotation = htime * 30 + mtime / 2;
+            mrotation = 6 * mtime;
+            srotation = 6 * stime;
+
+            hand1.style.transform = `rotate(${hrotation}deg)`;
+            hand2.style.transform = `rotate(${mrotation}deg)`;
+            hand3.style.transform = `rotate(${srotation}deg)`;
+        }, 1000);
+    </script>
+</body>
+
+</html>

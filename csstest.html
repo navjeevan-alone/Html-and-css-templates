@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css test animations</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        .btn-con {
+            display: block;
+            width: 100vw;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+        }
+        
+        .btn {
+            transform: translatex(-50%);
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .box {
+            visibility: hidden;
+            height: 4rem;
+            width: 18rem;
+            margin: auto;
+            position: relative;
+            top: 3rem;
+            line-height: 4rem;
+            overflow: hidden;
+        }
+        
+        .show {
+            visibility: visible;
+            /* animation: pop 1s; */
+            /* animation: fade 1s; */
+            /* animation: slide-right 1s; */
+            /* animation: slide-left 1s; */
+            /* animation: slide-up 1s; */
+            /* animation: slide-down 1s; */
+            animation: clockwise 1s;
+            animation: anti-clockwise 1s;
+            animation: drop 2s;
+            /* animation: pop-down 2s; */
+            /* animation: pop-right 1s; */
+            animation: pop-left 1s;
+            animation: pop-outwards 0.5s cubic-bezier(0.66, -0.12, 0.43, 1.35);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-con">
+
+        <button class="btn bg-blue te-white" onclick="pop()">click
+                me</button>
+    </div>
+    <div class="bg-lightgrey box ">
+        <h3 class="te-black te-center text">Testing my animations
+        </h3>
+    </div>
+    <script>
+        function pop() {
+            let btn = document.querySelector('.btn');
+            let box = document.querySelector(".box");
+            box.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

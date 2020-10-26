@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover transiton on links</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .container {
+            height: 3rem;
+            width: 20rem;
+            margin: 8rem auto;
+            transform: translatey(50%);
+            align-content: center;
+            background-color: #03A9F4;
+        }
+        
+        a {
+            display: block;
+            height: fit-content;
+            width: fit-content;
+            margin: 1.5rem auto;
+            line-height: 3rem;
+            color: #fff;
+            transition: .8s;
+        }
+        
+        a::after {
+            content: "";
+            display: none;
+            height: 3px;
+            width: 7rem;
+            border-radius: 2px;
+            background-color: #ffffff;
+            z-index: 50;
+            position: relative;
+            top: -12px;
+            left: -9px;
+            transition: all .8s;
+        }
+        
+        a:hover ::after {
+            display: block;
+        }
+        
+        .fa {
+            color: #fff;
+            margin-right: 7px;
+        }
+        
+        .rod {
+            height: 5rem;
+            width: 7rem;
+            background-color: #000000;
+            margin: auto;
+        }
+        
+        .rod::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 7rem;
+            background-color: #ffffff;
+            position: relative;
+            top: 2rem;
+            left: -7rem;
+            animation: slide .8s ease infinite;
+        }
+        
+        @keyframes slide {
+            from {
+                left: -7rem;
+            }
+            to {
+                left: 7rem;
+            }
+        }
+        /* .rod:hover::after {
+            display: block;
+            background-color: rgb(255, 0, 0);
+            left: 7rem;
+            transition: .8s;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <a href=" # "><i class="fa fa-windows"></i>Hover
+                me</a>
+    </div>
+    <div class="rod"></div>
+
+    <script>
+        let slide = document.getElementById('slide');
+        setTimeout(() => {
+            slide.append('slideleft');
+
+        }, 1000);
+    </script>
+</body>
+
+</html>

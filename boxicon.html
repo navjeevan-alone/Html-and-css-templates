@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box icon animation</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "oswald";
+        }
+        
+        .box {
+            display: flex;
+            position: relative;
+            top: 1rem;
+            height: 20rem;
+            width: 90vw;
+            margin: auto;
+            border: 1px solid red;
+            text-align: center;
+        }
+        
+        .box .content-box {
+            height: calc(20rem - 5rem);
+            width: calc(30vw - 30px);
+            /* border: 1px solid red; */
+            position: relative;
+            top: 50%;
+            transform: translatey(-50%);
+            margin-left: 1rem;
+            overflow: hidden;
+            background: #0be881;
+            border-radius: 10px;
+            /* transition: all .5s ease-in-out; */
+        }
+        
+        .content {
+            position: absolute;
+            top: 110%;
+            transition: all .5s ease-in-out;
+            transform-origin: center;
+            padding: 2rem;
+        }
+        
+        .content p,
+        .content h3 {
+            color: #fff;
+        }
+        
+        .icon {
+            display: inline-block;
+            background: #05c46b;
+            width: 100%;
+            height: 100%;
+            /* transition: all .5s ease-in-out; */
+            transform-origin: center;
+        }
+        
+        .icon .fa {
+            font-size: 90px;
+            color: #fff;
+            position: absolute;
+            width: 20%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .5s ease-in-out;
+            transform-origin: center;
+        }
+        /* hover animation */
+        
+        .content-box:hover .icon {
+            display: block;
+            position: absolute;
+            top: 1.5rem;
+            border-radius: 50%;
+            height: 4rem;
+            width: 4rem;
+            left: calc(50% - 2rem);
+        }
+        
+        .content-box:hover .icon .fa {
+            font-size: 30px;
+        }
+        
+        .content-box:hover .content {
+            top: 29%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content-box" id="content-box-1">
+            <div class="icon" id="icon-1">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="content">
+                <h3>Search</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolores laborum est maiores atque blanditiis corporis temporibus a omnis dolorem.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input animation</title>
+    <link rel="stylesheet" href="../csslibrary/common.css">
+    <style>
+        .box {
+            height: 2.5rem;
+            width: 15rem;
+        }
+        /* full border */
+        
+        input#user,
+        input#pass {
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgb(3, 211, 146);
+            padding-left: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        
+        input#pass {
+            border-radius: 0px;
+            border: 0px;
+            border-bottom: 2px solid rgb(3, 211, 146);
+        }
+        
+        span {
+            position: absolute;
+            top: 7px;
+            left: 15px;
+            width: 4.2rem;
+            text-align: center;
+            transition: .5s;
+            font-size: 20px;
+            pointer-events: none;
+        }
+        
+        input#user:focus+span {
+            color: #03d392;
+            top: -12px;
+            background: white;
+            width: 4.2rem;
+            font-size: 15px;
+        }
+        
+        .stick {
+            color: #03d392;
+            top: -12px;
+            background: white;
+            width: 4.2rem;
+            font-size: 15px;
+        }
+        /* only bottom border */
+    </style>
+</head>
+
+<body>
+    <div class="box box-center">
+        <input type="email" name="user" id="user">
+        <span>Username</span>
+    </div>
+    <script>
+        const d = document;
+        let user = d.querySelector("#user")
+        let pholder = d.querySelector("span")
+        if (user.value != "") {
+            pholder.classList.add("stick");
+        }
+    </script>
+</body>
+
+</html>

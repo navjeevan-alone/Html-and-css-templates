@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Box Animation
+    </title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background-color: #2196F3;
+        }
+        
+        .container {
+            display: grid;
+            height: 14rem;
+            width: 14rem;
+            margin: 5rem auto;
+            grid-template-columns: repeat(3, 4rem);
+            grid-template-rows: repeat(3, 4rem);
+            grid-gap: 15px;
+        }
+        
+        img {
+            display: block;
+            height: 12rem;
+            width: 12rem;
+            /* border: 1px solid red; */
+            position: relative;
+            top: -14rem;
+            left: 1rem;
+            z-index: 5;
+        }
+        
+        .img {
+            animation: img .8s forwards;
+            /* animation-delay: 5s; */
+        }
+        
+        @keyframes img {
+            0% {
+                display: none;
+                transform: rotate(45deg);
+            }
+            80% {
+                display: none;
+                transform: rotate(0deg);
+            }
+            100% {
+                display: block;
+            }
+        }
+        
+        .item {
+            display: block;
+            height: 4rem;
+            width: 4rem;
+            background-color: #ffffff;
+            /* margin: 1rem; */
+            z-index: 5;
+            /* border: 1px solid red; */
+            animation: 3s linear forwards infinite;
+            animation-delay: 1s;
+        }
+        
+        #item1 {
+            animation-name: item-1;
+            /* background-color: red; */
+        }
+        
+        @keyframes item-1 {
+            0% {
+                transform: translate(5rem, 5rem);
+            }
+            50% {
+                transform: translate(5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(1rem, 1rem);
+            }
+        }
+        
+        #item3 {
+            animation-name: item-3;
+            /* background-color: rgb(28, 255, 20); */
+        }
+        
+        @keyframes item-3 {
+            0% {
+                transform: translate(-5rem, 5rem);
+            }
+            50% {
+                transform: translate(-5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(-1rem, 1rem);
+            }
+        }
+        
+        #item9 {
+            animation-name: item-9;
+            /* background-color: black; */
+        }
+        
+        @keyframes item-9 {
+            0% {
+                transform: translate(-5rem, -5rem);
+            }
+            50% {
+                transform: translate(-5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(-1rem, -1rem);
+            }
+        }
+        
+        #item7 {
+            animation-name: item-7;
+            /* background-color: rgb(251, 235, 0); */
+        }
+        
+        @keyframes item-7 {
+            0% {
+                transform: translate(5rem, -5rem);
+            }
+            50% {
+                transform: translate(5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(1rem, -1rem);
+            }
+        }
+        
+        #item2 {
+            animation-name: item-2;
+            /* background-color: rgb(234, 0, 255); */
+        }
+        
+        @keyframes item-2 {
+            0% {
+                transform: translate(0rem, 5rem);
+            }
+            50% {
+                transform: translate(0rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(0rem, 1rem);
+            }
+        }
+        
+        #item8 {
+            animation-name: item-8;
+            /* background-color: rgb(234, 0, 255); */
+        }
+        
+        @keyframes item-8 {
+            0% {
+                transform: translate(0rem, -5rem);
+            }
+            50% {
+                transform: translate(0rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(0rem, -1rem);
+            }
+        }
+        
+        #item4 {
+            animation-name: item-4;
+            /* background-color: rgb(234, 0, 255); */
+        }
+        
+        @keyframes item-4 {
+            0% {
+                transform: translate(5rem, 0rem);
+            }
+            50% {
+                transform: translate(5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(1rem, 0rem);
+            }
+        }
+        
+        #item6 {
+            animation-name: item-6;
+            /* background-color: rgb(234, 0, 255); */
+        }
+        
+        @keyframes item-6 {
+            0% {
+                transform: translate(-5rem, 0rem);
+            }
+            50% {
+                transform: translate(-5rem, 0rem);
+            }
+            80% {
+                transform: translate(0rem, 0rem);
+            }
+            100% {
+                transform: translate(-1rem, 0rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1"></div>
+        <div class="item" id="item2"></div>
+        <div class="item" id="item3"></div>
+        <div class="item" id="item4"></div>
+        <div class="item" id="item5"></div>
+        <div class="item" id="item6"></div>
+        <div class="item" id="item7"></div>
+        <div class="item" id="item8"></div>
+        <div class="item" id="item9"></div>
+        <!-- <div class="img"><img src="\all_type_documents\Images\dino1png.png" alt="error"></div> -->
+    </div>
+</body>
+
+</html>

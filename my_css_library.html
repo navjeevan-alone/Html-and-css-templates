@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>My_CSS_library</title>
+        <link rel="stylesheet" href="common.css">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <style>
+            body {
+                display: flex;
+            }
+
+            .info-classes {
+                margin: 1rem 2rem;
+                height: auto;
+                width: 20rem;
+                text-align: center;
+                box-shadow: 0px 0px 5px var(--black);
+            }
+
+            .p-bg,
+            .p-te {
+                margin: 1px;
+            }
+
+            #btn-info {
+                width: 30rem;
+                text-align: left;
+                /* box-shadow: 0px 0px 5px var(--black); */
+            }
+
+            button {
+                margin: 2px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <button class="btn text-white">button</button> -->
+        <div class="info-classes">
+            <h3>This are my text colors classes</h3>
+            <p class="p-te te-red">te-red</p>
+            <p class="p-te te-yellow"> te-yellow</p>
+            <p class="p-te te-green">te-green</p>
+            <p class="p-te te-grey">te-grey</p>
+            <p class="p-te te-skyblue">te-skyblue</p>
+            <p class="p-te te-voilet">te-voilet</p>
+            <p class="p-te te-pink">te-pink</p>
+            <p class="p-te te-orange">te-orange</p>
+        </div>
+        <div class="info-classes">
+            <h3>This are my background colors classes</h3>
+            <p class="p-bg te-white bg-red">bg-red</p>
+            <p class="p-bg te-white bg-yellow"> bg-yellow
+            </p>
+            <p class="p-bg te-white bg-green">bg-green</p>
+            <p class="p-bg te-white bg-grey">bg-grey</p>
+            <p class="p-bg te-white bg-skyblue">bg-skyblue
+            </p>
+            <p class="p-bg te-white bg-voilet">bg-voilet</p>
+            <p class="p-bg te-white bg-pink">bg-pink</p>
+            <p class="p-bg te-white bg-orange">bg-orange</p>
+        </div>
+        <div class="info-classes" id="btn-info">
+            <h3>Buttons varients</h3> <br> normal button :
+            <button class="btn">normal</button> <br> choose
+            background :
+            <button class="btn bg-blue">blue
+                background</button> <br> choose text color :
+            <button class="btn  te-red">red
+                text</button> <br> autofit text no-extra
+            class needed:
+            <button class="btn bg-yellow te-capital">This is
+                large text
+                auto fit </button> choose text transform:
+            <button
+                    class="btn bg-pink te-capital">capitalize
+                first
+                letter</button>
+            <button class="btn bg-voilet te-lower">all
+                letters
+                lowercase</button>
+            <button class="btn bg-orange te-upper">all
+                letters
+                uppercase</button>
+
+        </div>
+        <br>
+
+    </body>
+
+</html>

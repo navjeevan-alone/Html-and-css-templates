@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login blue version</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --con-width: 18rem;
+            --pro-width: 100px;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(27deg, rgb(28, 68, 199) 50%, rgb(29, 42, 156) 50%);
+        }
+        
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 28rem;
+            width: var(--con-width);
+            border-radius: 13px;
+            box-shadow: 0px 0px 12px;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(27deg, rgb(29, 42, 156) 50%, rgb(28, 68, 199) 50%);
+        }
+        
+        #profile {
+            height: 100px;
+            width: var(--pro-width);
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+            transform: translatey(-50%);
+            position: relative;
+            left: clac((var(--con-width)-var(--pro-width))/2);
+            box-shadow: 0px 0px 13px black;
+        }
+        
+        .user {
+            color: white;
+            text-align: center;
+            font-size: 26px;
+            margin-top: -27px;
+            margin-bottom: 54px;
+        }
+        
+        input {
+            width: 233px;
+            height: 31px;
+            /* border-radius: 5px; */
+            outline: none;
+            border: 0px;
+            margin: 15px auto;
+            padding-left: 41px;
+            background: none;
+            border-bottom: 3px solid #00BCD4;
+            color: white;
+            font-size: 17px;
+        }
+        
+         ::placeholder {
+            color: white;
+            font-size: 17px;
+        }
+        
+        #login {
+            background-color: rgb(7, 61, 241);
+            margin: 10px auto;
+            width: 84%;
+            color: white;
+            font-size: 19px;
+            transition: box-shadow 0.5s;
+        }
+        
+        #login:hover,
+        #login:focus {
+            box-shadow: 0px 0px 9px 4px #35c4d6;
+            opacity: 1;
+        }
+        
+        i {
+            position: relative;
+            top: 41px;
+            left: 28px;
+            color: #ffffff;
+            height: 2rem;
+            width: 2rem;
+            background-color: #2196F3;
+            text-align: center;
+            border-radius: 3px;
+        }
+        
+        .fa {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        
+        .foot {
+            margin-left: 10px;
+            display: flex;
+        }
+        
+        .foot-a {
+            color: #c0c2c7;
+            display: inline-block;
+            margin: auto;
+            transition: .5s;
+        }
+        
+        .foot-a:hover,
+        .foot-a:focus {
+            color: #ffffff;
+            transform: scale(1.2);
+        }
+        
+        .foot-a:hover::after {
+            content: '';
+            width: 5rem;
+            height: 5px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <img src="img/profile.png" alt="profile" id="profile">
+        <h3 class="user">User Login</h3>
+        <i class="fa fa-user"></i>
+        <input type="text" name="name" id="name" placeholder="Username">
+        <i class="fa fa-lock"></i>
+        <input type="password" name="pass" id="pass" placeholder="Password">
+        <a class="btn te-upper " id="login">Login</a>
+        <div class="foot">
+
+            <a href="#" class="foot-a">Register</a>
+            <a href="#" class="foot-a">Forget
+                    Password?</a>
+        </div>
+    </div>
+</body>
+
+</html>

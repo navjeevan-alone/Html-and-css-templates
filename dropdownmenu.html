@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+    <style>
+        * {
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .main {
+            display: flex;
+            margin: auto;
+        }
+        
+        .main li {
+            height: 2rem;
+            width: 7rem;
+            line-height: 2rem;
+            background: var(--orange);
+            position: relative;
+        }
+        
+        .main li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .main li:hover {
+            background: var(--blue);
+        }
+        
+        .main>ul.sub {
+            display: none;
+            position: absolute;
+            left: 0%;
+        }
+        
+        ul.main li :hover ul.sub {
+            background: var(--green);
+            display: block;
+        }
+        
+        .main ul.sub ul.deep {
+            /* display: none; */
+            position: absolute;
+            left: 100%;
+        }
+        
+        .main ul.sub ul.deep ul.subdeep {
+            /* display: none; */
+            position: absolute;
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <ul class="main">
+            <li><a>Item 1</a>
+                <ul class="sub">
+                    <li><a>Sub Item 1</a></li>
+                    <li><a>Sub Item 2</a></li>
+                    <li><a>Sub Item 3</a>
+                        <ul class="deep">
+                            <li><a>Deep Item 1</a></li>
+                            <li><a>Deep Item 2</a></li>
+                            <li><a>Deep Item 3</a>
+                                <ul class="subdeep">
+                                    <li><a>Subdeep Item 1</a></li>
+                                    <li><a>Subdeep Item 2</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a>Sub Item 4</a></li>
+                </ul>
+            </li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li>
+            <li><a>Item 4</a></li>
+            <li><a>Item 5</a>
+                <ul class="sub">
+                    <li><a>Sub Item 1</a></li>
+                    <li><a>Sub Item 2</a></li>
+                    <li><a>Sub Item 3</a>
+                        <ul class="deep">
+                            <li><a>Deep Item 1</a></li>
+                            <li><a>Deep Item 2</a>
+                                <ul class="subdeep">
+                                    <li><a>Subdeep Item 1</a></li>
+                                    <li><a>Subdeep Item 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Deep Item 3</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a>Sub Item 4</a></li>
+                </ul>
+            </li>
+            <li><a>Item 6</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="csslibrary/common.css">
+
+    <style>
+         :root {
+            --mar: 8rem;
+        }
+        
+        .pop-container {
+            margin: auto;
+            height: 3rem;
+            width: 15rem;
+            position: relative;
+            top: 2rem;
+            line-height: 3rem;
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+        
+        .poptext {
+            cursor: pointer;
+        }
+        
+        .popup {
+            visibility: hidden;
+            height: 3rem;
+            margin: auto;
+            width: 15rem;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 4rem;
+            left: 0rem;
+            display: block;
+            background: var(--greydark);
+            line-height: 3rem;
+            border-radius: 23px;
+        }
+        
+        .popup::after {
+            content: "";
+            background: #343a40;
+            height: 1rem;
+            width: 1rem;
+            transform: rotate(45deg);
+            z-index: -1;
+            position: absolute;
+            top: -13%;
+            left: 49%;
+            border-radius: 4px;
+        }
+        
+        .pop2 {
+            position: relative;
+            margin: auto;
+            height: 9rem;
+            background: #00dcff1f;
+            width: 25rem;
+        }
+        
+        .poptext2 {
+            position: relative;
+            display: block;
+            top: 2rem;
+            height: 3rem;
+            width: 15rem;
+            line-height: 3rem;
+            margin: auto;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .pop-box {
+            visibility: hidden;
+            position: relative;
+            height: 15rem;
+            /* left: var(--mar); */
+            right: var(--mar);
+            top: 6rem;
+            width: 42rem;
+            background-color: darkblue;
+            margin: auto;
+        }
+        
+        .show {
+            visibility: visible;
+            animation: fade 1s ease-in-out alternate;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: scale(-.0001) rotate(180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="bg-blue te-center te-white">A simple popup test
+    </h2>
+    <!-- <div class="pop-container te-center bg-lightgrey  ">
+        <h4 class="te-dark pop-text" onclick="pop()">
+            Click me to see popup</h4>
+        <div class="popup te-dark bg-white ">
+            <h4 class="te-white">I am simple Popup</h4>
+        </div>
+    </div> -->
+
+    <div class="pop2">
+        <p class="poptext2 bg-lightgrey te-center " onclick="popme()">
+            Click me to see popup
+        </p>
+
+        <div class="pop-box">
+            <h4 class="te-white te-center">I am BIG POPUP
+            </h4>
+            <label for="name" class="te-white">Enter
+                    your name</label>
+            <input type="text" name="name" id="name">
+
+
+        </div>
+    </div>
+    <script>
+        // function pop() {
+        //     let popup = document.querySelector(".popup");
+        //     let poptext = document.querySelector(".poptext");
+        //     popup.classList.toggle('show');
+        // }
+
+        function popme() {
+            let popup = document.querySelector(".pop-box");
+            let poptext = document.querySelector(".poptext2");
+            popup.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
